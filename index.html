@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chidvilash — B.Tech CSE (Internet of Things) student at VIT Vellore. Portfolio featuring frontend, networking, database and quantum computing work." />
+  <meta name="theme-color" content="#080b14" />
+  <title>Chidvilash — CSE (IoT) Student Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <noscript>This portfolio needs JavaScript enabled for its interactive effects.</noscript>
+
+  <div class="boot-screen" id="bootScreen" aria-hidden="true">
+    <div class="boot-card">
+      <div class="boot-mark">C<span>OS</span></div>
+      <p id="bootText">Initializing Chidvilash OS...</p>
+      <div class="boot-track"><span id="bootBar"></span></div>
+      <small id="bootPercent">0%</small>
+    </div>
+  </div>
+
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="aurora aurora-one" aria-hidden="true"></div>
+  <div class="aurora aurora-two" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <header class="topbar" id="topbar">
+    <a class="brand magnetic" href="#home" aria-label="Chidvilash portfolio home">
+      <span class="brand-icon">C</span>
+      <span>CHIDVILASH<span class="brand-os">.OS</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="top-actions">
+      <button class="icon-button magnetic" id="themeToggle" type="button" aria-label="Switch ambient color theme" title="Switch ambient color theme">
+        <span class="theme-dot"></span>
+      </button>
+      <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="live-dot"></span> VIT Vellore • B.Tech CSE (Internet of Things) • 2028</div>
+          <p class="hero-kicker">IOT STUDENT • FRONTEND BUILDER • SYSTEMS EXPLORER</p>
+          <h1>
+            I build ideas that feel
+            <span class="gradient-text">one step ahead.</span>
+          </h1>
+          <p class="hero-description">
+            I’m <strong>Chidvilash</strong>, a B.Tech Computer Science and Engineering student specializing in the Internet of Things at VIT Vellore, building across frontend development, databases, computer networks and quantum computing.
+          </p>
+          <div class="type-row" aria-live="polite">
+            <span>Currently exploring</span>
+            <strong id="typeText">Network Intelligence</strong><span class="type-caret">|</span>
+          </div>
+          <div class="hero-actions">
+            <a href="#projects" class="button button-primary magnetic">Explore my work <span>↗</span></a>
+            <a href="https://github.com/Chidvilash-007" target="_blank" rel="noopener noreferrer" class="button button-ghost magnetic">Visit GitHub</a>
+          </div>
+          <div class="micro-stats">
+            <div><strong>05</strong><span>Featured builds</span></div>
+            <div><strong>2028</strong><span>Expected graduation</span></div>
+            <div><strong>IBM</strong><span>Quantum course certificate</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" data-delay="140">
+          <div class="visual-shell" id="visualShell">
+            <div class="orbit orbit-a"><span></span></div>
+            <div class="orbit orbit-b"><span></span></div>
+            <div class="orbit orbit-c"><span></span></div>
+            <div class="core-orb">
+              <div class="core-glow"></div>
+              <span class="core-letter">C</span>
+              <small>creative systems</small>
+            </div>
+            <span class="floating-chip chip-one">React</span>
+            <span class="floating-chip chip-two">DBMS</span>
+            <span class="floating-chip chip-three">Qiskit</span>
+            <span class="floating-chip chip-four">Networks</span>
+          </div>
+          <div class="status-card glass-card">
+            <div class="status-line"><span class="pulse"></span> SYSTEM STATUS</div>
+            <strong>Building in public</strong>
+            <p>Learning, testing and improving every project.</p>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#about" aria-label="Scroll to about section">
+        <span>SCROLL TO DISCOVER</span><i></i>
+      </a>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-heading reveal">
+        <span class="section-number">01 / ABOUT</span>
+        <h2>Not just code.<br /><span>Thoughtful digital experiences.</span></h2>
+      </div>
+
+      <div class="bento-grid">
+        <article class="bento bento-large glass-card reveal spotlight-card">
+          <span class="card-label">WHO I AM</span>
+          <h3>A student who learns by turning concepts into working products.</h3>
+          <p>
+            My work lives at the intersection of clean interfaces, connected systems and strong technical foundations. I enjoy transforming classroom concepts into projects people can actually see, use and understand.
+          </p>
+          <div class="signature">Chidvilash <span>↯</span></div>
+        </article>
+
+        <article class="bento glass-card reveal spotlight-card education-bento" data-delay="80">
+          <span class="card-label">EDUCATION</span>
+          <div class="degree-mark">VIT<span>28</span></div>
+          <h3>Computer Science & Engineering</h3>
+          <p>Specialization in Internet of Things<br />VIT Vellore • Expected graduation: 2028</p>
+        </article>
+
+        <article class="bento glass-card reveal spotlight-card" data-delay="120">
+          <span class="card-label">BUILD PHILOSOPHY</span>
+          <div class="quote-mark">“</div>
+          <blockquote>Make it understandable first, memorable second, and impressive without becoming confusing.</blockquote>
+        </article>
+
+        <article class="bento bento-wide glass-card reveal spotlight-card" data-delay="160">
+          <span class="card-label">MY TOOLBOX</span>
+          <div class="tool-marquee" aria-label="Technology list">
+            <div class="tool-track">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Java</span><span>Python</span><span>SQL</span><span>Qiskit</span><span>Git</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Java</span><span>Python</span><span>SQL</span><span>Qiskit</span><span>Git</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="section-heading reveal">
+        <span class="section-number">02 / CAPABILITIES</span>
+        <h2>A growing stack built around<br /><span>curiosity and execution.</span></h2>
+      </div>
+
+      <div class="skills-layout">
+        <div class="skill-console glass-card reveal">
+          <div class="console-head">
+            <span></span><span></span><span></span>
+            <small>chidvilash@portfolio: ~/skills</small>
+          </div>
+          <div class="console-body">
+            <p><em>$</em> scan --capabilities</p>
+            <div class="skill-line"><span>Frontend Engineering</span><i style="--level: 86%"></i><b>86%</b></div>
+            <div class="skill-line"><span>Java & Problem Solving</span><i style="--level: 80%"></i><b>80%</b></div>
+            <div class="skill-line"><span>Database Systems</span><i style="--level: 76%"></i><b>76%</b></div>
+            <div class="skill-line"><span>Computer Networks</span><i style="--level: 72%"></i><b>72%</b></div>
+            <div class="skill-line"><span>Quantum Computing</span><i style="--level: 70%"></i><b>70%</b></div>
+            <p class="console-success">✓ Profile loaded. Continuous learning enabled.</p>
+          </div>
+        </div>
+
+        <div class="skill-cards">
+          <article class="skill-card glass-card reveal spotlight-card" data-delay="60">
+            <div class="skill-icon">&lt;/&gt;</div>
+            <h3>Frontend</h3>
+            <p>Responsive interfaces, motion, layouts and interactive web experiences.</p>
+            <div class="tag-row"><span>HTML</span><span>CSS</span><span>JS</span><span>React</span></div>
+          </article>
+          <article class="skill-card glass-card reveal spotlight-card" data-delay="110">
+            <div class="skill-icon">⌘</div>
+            <h3>Core CS</h3>
+            <p>Operating systems, DBMS, algorithms and networking fundamentals.</p>
+            <div class="tag-row"><span>SQL</span><span>OS</span><span>CN</span><span>Java</span></div>
+          </article>
+          <article class="skill-card glass-card reveal spotlight-card" data-delay="160">
+            <div class="skill-icon">ψ</div>
+            <h3>Quantum</h3>
+            <p>Circuit simulations, statevectors, gate decomposition and visual analysis.</p>
+            <div class="tag-row"><span>Qiskit</span><span>Python</span><span>Circuits</span></div>
+          </article>
+          <article class="skill-card glass-card reveal spotlight-card" data-delay="210">
+            <div class="skill-icon">✦</div>
+            <h3>Creative Build</h3>
+            <p>Visual concepts, custom themes, prototypes and presentation-ready polish.</p>
+            <div class="tag-row"><span>UI</span><span>Motion</span><span>Branding</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-heading reveal">
+        <span class="section-number">03 / SELECTED WORK</span>
+        <h2>Projects with personality,<br /><span>purpose and progress.</span></h2>
+      </div>
+
+      <div class="project-list">
+        <article class="project-card reveal tilt-card" tabindex="0" data-project="network">
+          <div class="project-index">01</div>
+          <div class="project-art art-network">
+            <div class="network-ui">
+              <div class="net-top"><span></span><span></span><span></span></div>
+              <div class="net-grid">
+                <div class="net-sidebar"><i></i><i></i><i></i><i></i></div>
+                <div class="net-main">
+                  <div class="graph"><svg viewBox="0 0 300 100" preserveAspectRatio="none"><path d="M0 78 C28 72, 40 26, 70 52 S118 84, 150 42 S205 10, 230 50 S272 80, 300 28" /></svg></div>
+                  <div class="mini-panels"><span></span><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-copy">
+            <div class="project-topline"><span class="status ongoing">ONGOING</span><span>DBMS × NETWORKS</span></div>
+            <h3>Network Monitoring & Database Analytics</h3>
+            <p>A monitoring platform designed to observe network activity, connected devices and performance while organizing logs for useful database-driven analysis.</p>
+            <div class="tag-row"><span>Computer Networks</span><span>SQL</span><span>Analytics</span></div>
+            <button class="text-button" type="button">View project system <span>↗</span></button>
+          </div>
+        </article>
+
+        <article class="project-card reveal tilt-card reverse" tabindex="0" data-project="youtube">
+          <div class="project-index">02</div>
+          <div class="project-art art-youtube">
+            <div class="yt-window">
+              <div class="yt-header"><b>▶</b><span></span><i></i><i></i></div>
+              <div class="yt-body">
+                <div class="yt-menu"><span></span><span></span><span></span><span></span></div>
+                <div class="yt-content">
+                  <div class="yt-hero"></div>
+                  <div class="yt-cards"><span></span><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-copy">
+            <div class="project-topline"><span class="status complete">CUSTOMIZED</span><span>BROWSER EXPERIENCE</span></div>
+            <h3>YouTube Custom CSS Extension</h3>
+            <p>A personalized YouTube redesign with custom backgrounds, cleaner surfaces, improved visual hierarchy and a distinctive interface style.</p>
+            <div class="tag-row"><span>CSS</span><span>Browser Extension</span><span>UI Design</span></div>
+            <button class="text-button" type="button">View visual concept <span>↗</span></button>
+          </div>
+        </article>
+
+        <article class="project-card reveal tilt-card" tabindex="0" data-project="food">
+          <div class="project-index">03</div>
+          <div class="project-art art-food">
+            <div class="food-gallery-art" aria-label="Food Express interface previews">
+              <img class="food-shot food-shot-main" src="assets/food-express/home.webp" alt="Food Express home page showing food categories and popular snacks" loading="lazy" />
+              <img class="food-shot food-shot-a" src="assets/food-express/restaurants.webp" alt="Food Express restaurant discovery page" loading="lazy" />
+              <img class="food-shot food-shot-b" src="assets/food-express/tracking.webp" alt="Food Express order tracking interface" loading="lazy" />
+              <img class="food-shot food-shot-c" src="assets/food-express/profile.webp" alt="Food Express customer profile interface" loading="lazy" />
+            </div>
+          </div>
+          <div class="project-copy">
+            <div class="project-topline"><span class="status prototype">PROTOTYPE</span><span>FRONTEND</span></div>
+            <h3>Food Express</h3>
+            <p>An in-progress frontend prototype featuring nearby restaurant discovery, food browsing, customer profile screens and an order-tracking interface.</p>
+            <div class="tag-row"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span></div>
+            <button class="text-button" type="button">View prototype details <span>↗</span></button>
+          </div>
+        </article>
+
+        <article class="project-card reveal tilt-card reverse" tabindex="0" data-project="quantum">
+          <div class="project-index">04</div>
+          <div class="project-art art-quantum">
+            <div class="quantum-stage">
+              <div class="bloch"><span class="axis x"></span><span class="axis y"></span><span class="axis z"></span><i></i></div>
+              <div class="circuit-lines">
+                <div><span>H</span><i></i><b>●</b></div>
+                <div><i></i><span>X</span><b>⌁</b></div>
+                <div><span>RZ</span><i></i><b>⌁</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-copy">
+            <div class="project-topline"><span class="status complete">IBM COURSE</span><span>QUANTUM LEARNING</span></div>
+            <h3>Quantum Computing Experiments</h3>
+            <p>A collection of quantum circuit experiments covering gate decomposition, Bloch-sphere movement, statevector analysis and measurement-based verification, supported by IBM quantum learning.</p>
+            <div class="tag-row"><span>Qiskit</span><span>Python</span><span>Quantum Circuits</span></div>
+            <button class="text-button" type="button">Enter quantum lab <span>↗</span></button>
+          </div>
+        </article>
+
+        <article class="project-card reveal tilt-card" tabindex="0" data-project="vtop">
+          <div class="project-index">05</div>
+          <div class="project-art art-vtop">
+            <div class="vtop-window">
+              <div class="vtop-nav"><strong>VTOP</strong><span></span><span></span><span></span></div>
+              <div class="vtop-layout">
+                <aside><i></i><i></i><i></i><i></i><i></i></aside>
+                <main>
+                  <div class="vtop-title"></div>
+                  <div class="vtop-tiles"><span></span><span></span><span></span><span></span></div>
+                  <div class="vtop-table"></div>
+                </main>
+              </div>
+            </div>
+          </div>
+          <div class="project-copy">
+            <div class="project-topline"><span class="status experiment">EXPERIMENT</span><span>UI THEME</span></div>
+            <h3>VTOP Theme Extension</h3>
+            <p>An interface experiment exploring how custom colors, spacing and visual effects could make a student portal feel cleaner and more personal.</p>
+            <div class="tag-row"><span>CSS</span><span>JavaScript</span><span>Extension</span></div>
+            <button class="text-button" type="button">View design experiment <span>↗</span></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section credentials" id="credentials">
+      <div class="section-heading reveal">
+        <span class="section-number">04 / CREDENTIALS</span>
+        <h2>Proof of learning.<br /><span>Profiles that show the work.</span></h2>
+      </div>
+
+      <div class="credential-grid">
+        <article class="certificate-card glass-card reveal spotlight-card">
+          <a class="certificate-preview" href="assets/certificates/IBM-Foundation-of-Quantum-Technologies.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open IBM Foundation of Quantum Technologies certificate">
+            <img src="assets/certificates/ibm-quantum.webp" alt="IBM Foundation of Quantum Technologies certificate awarded to Gedela Chidvilash" loading="lazy" />
+            <span>OPEN CERTIFICATE ↗</span>
+          </a>
+          <div class="certificate-copy">
+            <div class="project-topline"><span class="status complete">COURSE CERTIFICATE</span><span>JULY 3, 2026</span></div>
+            <h3>Foundation of Quantum Technologies</h3>
+            <p>Issued by the IBM Career Education Program and powered by the IBM Developer Skills Network.</p>
+            <a class="text-link" href="assets/certificates/IBM-Foundation-of-Quantum-Technologies.pdf" target="_blank" rel="noopener noreferrer">View certificate PDF ↗</a>
+          </div>
+        </article>
+
+        <article class="profile-hub glass-card reveal spotlight-card" data-delay="100">
+          <span class="card-label">DIGITAL PROFILES</span>
+          <h3>Code, learning and professional presence.</h3>
+          <p>Explore the places where I publish projects, build connections and practice problem-solving.</p>
+          <div class="profile-links">
+            <a href="https://github.com/Chidvilash-007" target="_blank" rel="noopener noreferrer"><span>GH</span><div><strong>GitHub</strong><small>@Chidvilash-007</small></div><b>↗</b></a>
+            <a href="https://www.linkedin.com/in/chidvilash-gedela-519a21324/" target="_blank" rel="noopener noreferrer"><span>IN</span><div><strong>LinkedIn</strong><small>Chidvilash Gedela</small></div><b>↗</b></a>
+            <a href="https://leetcode.com/u/chidvilash_007/" target="_blank" rel="noopener noreferrer"><span>LC</span><div><strong>LeetCode</strong><small>chidvilash_007</small></div><b>↗</b></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section journey" id="journey">
+      <div class="section-heading reveal">
+        <span class="section-number">05 / JOURNEY</span>
+        <h2>Learning in layers.<br /><span>Building with every semester.</span></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line" aria-hidden="true"><span id="timelineProgress"></span></div>
+        <article class="timeline-item reveal">
+          <span class="timeline-dot"></span>
+          <div class="timeline-date">2024 - 2028</div>
+          <div class="timeline-card glass-card spotlight-card">
+            <small>VIT VELLORE</small>
+            <h3>B.Tech CSE - Internet of Things</h3>
+            <p>Building a foundation across programming, connected systems, databases, networks and software engineering.</p>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <span class="timeline-dot"></span>
+          <div class="timeline-date">JUL 2026</div>
+          <div class="timeline-card glass-card spotlight-card">
+            <small>IBM CAREER EDUCATION PROGRAM</small>
+            <h3>Foundation of Quantum Technologies</h3>
+            <p>Completed IBM-supported quantum technology learning covering quantum gates, simulations, statevectors and circuit analysis.</p>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <span class="timeline-dot"></span>
+          <div class="timeline-date">PRESENT</div>
+          <div class="timeline-card glass-card spotlight-card">
+            <small>SYSTEMS & PRODUCTS</small>
+            <h3>Connecting frontend to foundations</h3>
+            <p>Currently studying cloud architecture, databases, operating systems and networks while building practical projects.</p>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <span class="timeline-dot"></span>
+          <div class="timeline-date">NEXT</div>
+          <div class="timeline-card glass-card spotlight-card">
+            <small>THE ROAD AHEAD</small>
+            <h3>Ship stronger, smarter systems</h3>
+            <p>Turn prototypes into complete products, collaborate deeply and create work that stands out for both design and engineering.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-grid">
+        <div class="contact-copy reveal">
+          <span class="section-number">06 / CONTACT</span>
+          <h2>Have an idea worth<br /><span>building?</span></h2>
+          <p>Let’s turn it into something clear, useful and impossible to ignore.</p>
+          <div class="contact-actions">
+            <a class="button button-primary magnetic" href="mailto:gchidvilashnaidu@gmail.com">Start a conversation <span>↗</span></a>
+            <p class="edit-note">gchidvilashnaidu@gmail.com</p>
+            <div class="social-row" aria-label="Professional profiles">
+              <a href="https://www.linkedin.com/in/chidvilash-gedela-519a21324/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+              <a href="https://github.com/Chidvilash-007" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <a href="https://leetcode.com/u/chidvilash_007/" target="_blank" rel="noopener noreferrer">LeetCode ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="terminal glass-card reveal" data-delay="120">
+          <div class="terminal-head">
+            <div><span></span><span></span><span></span></div>
+            <small>chidvilash_terminal</small>
+            <b>⌘ K</b>
+          </div>
+          <div class="terminal-output" id="terminalOutput" aria-live="polite">
+            <p><span class="terminal-green">Chidvilash OS v1.0</span> — interactive contact terminal</p>
+            <p>Type <strong>help</strong> to discover commands.</p>
+          </div>
+          <form class="terminal-input" id="terminalForm">
+            <label for="terminalCommand">visitor@chidvilash:~$</label>
+            <input id="terminalCommand" name="command" autocomplete="off" spellcheck="false" placeholder="help" />
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#home"><span class="brand-icon">C</span><span>CHIDVILASH<span class="brand-os">.OS</span></span></a>
+    <p>Designed with curiosity. Engineered with intention.</p>
+    <div class="footer-links">
+      <a href="mailto:gchidvilashnaidu@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/chidvilash-gedela-519a21324/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/Chidvilash-007" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://leetcode.com/u/chidvilash_007/" target="_blank" rel="noopener noreferrer">LeetCode</a>
+      <a href="#home">Top ↑</a>
+    </div>
+  </footer>
+
+  <dialog class="project-modal" id="projectModal">
+    <button class="modal-close" id="modalClose" type="button" aria-label="Close project details">×</button>
+    <div class="modal-status" id="modalStatus">PROJECT</div>
+    <h2 id="modalTitle">Project title</h2>
+    <p id="modalDescription">Project description</p>
+    <div class="modal-grid">
+      <div><span>ROLE</span><strong id="modalRole">Developer</strong></div>
+      <div><span>STATUS</span><strong id="modalState">Ongoing</strong></div>
+      <div><span>STACK</span><strong id="modalStack">HTML, CSS, JS</strong></div>
+    </div>
+    <div class="modal-focus">
+      <span>PROJECT FOCUS</span>
+      <p id="modalFocus">Project focus details.</p>
+    </div>
+    <div class="modal-gallery" id="modalGallery" aria-label="Project screenshots"></div>
+    <div class="modal-actions" id="modalActions"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
